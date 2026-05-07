@@ -138,5 +138,4 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             export S3_BUCKET=${{ secrets.CLOUD_BUCKET }}
-            dvc remote modify myremote profile default 2>/dev/null || true
             curl -sf http://localhost:8000/health && echo "Health check passed." || (sudo systemctl restart mlops-serve && sleep 5 && curl -sf http://localhost:8000/health && echo "Health check passed." || exit 1)

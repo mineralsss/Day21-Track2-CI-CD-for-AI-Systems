@@ -2,3 +2,4 @@
     remote = myremote
 ['remote "myremote"']
     url = s3://tuana-my-data-bucket
+    credentialpath = ../sa-key.json
